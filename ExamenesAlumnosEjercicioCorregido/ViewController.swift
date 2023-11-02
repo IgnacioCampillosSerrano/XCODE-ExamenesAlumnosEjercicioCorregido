@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtPosicionLista: UITextField!
     @IBOutlet weak var txtTotalAcertadas: UITextField!
     @IBOutlet weak var txtTotalPreguntas: UITextField!
-    @IBOutlet weak var lbResultado: UILabel!
     
     //VARIABLES PARA LA LÓGICA
     
@@ -45,22 +44,6 @@ class ViewController: UIViewController {
         
     }
     
-
-    @IBAction func btnVerExamen(_ sender: Any) {
-        let indice = txtPosicionLista.text!
-        
-        if indice.isEmpty{
-            alertError(titulo: "ERROR", mensaje: "Pon un indice")
-        }else{
-            if Int(indice)! < 1 || Int(indice)! > listaExamenes.count {
-                alertError(titulo: "ERROR", mensaje: "Posicion incorrecta")
-            }else{
-                lbResultado.text = listaExamenes[Int(indice)! - 1].toString()
-            }
-        }
-        
-    }
-    
     func alertError(titulo: String, mensaje: String){
         //Crear alerta
         let alert = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
@@ -69,5 +52,23 @@ class ViewController: UIViewController {
         //Añadir el alert a la actividad (show)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indice = txtPosicionLista.text!
+        
+        if indice.isEmpty{
+            alertError(titulo: "ERROR", mensaje: "Pon un indice")
+        }else{
+            if Int(indice)! < 1 || Int(indice)! > listaExamenes.count {
+                alertError(titulo: "ERROR", mensaje: "Posicion incorrecta")
+            }else{
+                //Si el identificador del segue es ver, entonces el destino del segue es el controllador de la otra actividad, y le pasas a la variable examen (de la otra actividad) el examen con indice X de la listaExamenes
+                if segue.identifier == "VER"{
+                    let destino = segue.destination as! VerExamenViewController
+                    destino.examen = listaExamenes[Int(indice)! - 1]
+                }
+            }
+        }
     }
+}
 

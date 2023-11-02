@@ -16,6 +16,7 @@
 		946CB1DB2AEA73E2007A9A4C /* ExamenesAlumnosEjercicioCorregidoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946CB1DA2AEA73E2007A9A4C /* ExamenesAlumnosEjercicioCorregidoTests.swift */; };
 		946CB1E62AEA73E3007A9A4C /* ExamenesAlumnosEjercicioCorregidoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946CB1E52AEA73E3007A9A4C /* ExamenesAlumnosEjercicioCorregidoUITests.swift */; };
 		946CB1F82AEA7488007A9A4C /* Examen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946CB1F72AEA7488007A9A4C /* Examen.swift */; };
+		946CB1FD2AEA8740007A9A4C /* VerExamenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946CB1FC2AEA8740007A9A4C /* VerExamenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		946CB1E52AEA73E3007A9A4C /* ExamenesAlumnosEjercicioCorregidoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamenesAlumnosEjercicioCorregidoUITests.swift; sourceTree = "<group>"; };
 		946CB1E72AEA73E3007A9A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946CB1F72AEA7488007A9A4C /* Examen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examen.swift; sourceTree = "<group>"; };
+		946CB1FC2AEA8740007A9A4C /* VerExamenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerExamenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				946CB1CC2AEA73E2007A9A4C /* Assets.xcassets */,
 				946CB1CE2AEA73E2007A9A4C /* LaunchScreen.storyboard */,
 				946CB1D12AEA73E2007A9A4C /* Info.plist */,
+				946CB1FC2AEA8740007A9A4C /* VerExamenViewController.swift */,
 			);
 			path = ExamenesAlumnosEjercicioCorregido;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				946CB1C82AEA73E0007A9A4C /* ViewController.swift in Sources */,
 				946CB1F82AEA7488007A9A4C /* Examen.swift in Sources */,
+				946CB1FD2AEA8740007A9A4C /* VerExamenViewController.swift in Sources */,
 				946CB1C42AEA73E0007A9A4C /* AppDelegate.swift in Sources */,
 				946CB1C62AEA73E0007A9A4C /* SceneDelegate.swift in Sources */,
 			);
